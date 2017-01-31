@@ -20,9 +20,8 @@ class ViewController: UIViewController {
     
     @IBAction func pushMe(_ sender: AnyObject) {
         //this code will run when button is pushed
+        helloLabel.text = "Answer: \(Double(text1.text!)! + Double(text2.text!)!)"
         
-        print(text1.text)
-        print(text2.text)
     }
     
     override func viewDidLoad() {
