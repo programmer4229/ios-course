@@ -11,21 +11,20 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBOutlet weak var helloLabel: UILabel!
+    //first text box
+    @IBOutlet weak var text1: UITextField!
+    //second text box
+    @IBOutlet weak var text2: UITextField!
     
     var tapCount  = 0
     
     @IBAction func pushMe(_ sender: AnyObject) {
+        //this code will run when button is pushed
         
-        tapCount = tapCount + 1
-        
-        if tapCount >= 10 {
-            helloLabel.text  = "You tapped the button ten times!"  
-        }
+        print(text1.text)
+        print(text2.text)
     }
     
-    @IBAction func clickMe(_ sender: AnyObject) {
-        helloLabel.text = "Buttons are cool!"
-    }
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.

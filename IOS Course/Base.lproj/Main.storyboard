@@ -18,7 +18,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello World" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bqy-ta-XYq">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ghetto Calculator" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bqy-ta-XYq">
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -29,25 +29,39 @@
                                     <action selector="pushMe:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ft3-KE-RYE"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wml-5n-wEH">
-                                <state key="normal" title="CLICK"/>
-                                <connections>
-                                    <action selector="clickMe:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bXM-PP-Y5g"/>
-                                </connections>
-                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JFM-Pg-tda">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="BVz-4X-8tJ"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7Rn-Lw-Bqg">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="mVa-m0-K0G"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="JFM-Pg-tda" firstAttribute="top" secondItem="NME-nV-kDa" secondAttribute="bottom" constant="33" id="1C2-Rt-MHV"/>
                             <constraint firstItem="bqy-ta-XYq" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="C7l-r4-nj7"/>
-                            <constraint firstItem="Wml-5n-wEH" firstAttribute="top" secondItem="NME-nV-kDa" secondAttribute="bottom" constant="8" id="GNS-Gy-sgv"/>
                             <constraint firstItem="NME-nV-kDa" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="KGW-3b-QNe"/>
-                            <constraint firstItem="Wml-5n-wEH" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Xbf-0v-ubl"/>
+                            <constraint firstItem="7Rn-Lw-Bqg" firstAttribute="top" secondItem="JFM-Pg-tda" secondAttribute="bottom" constant="15" id="Ow8-Mb-NgX"/>
+                            <constraint firstItem="JFM-Pg-tda" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="QOY-Pg-TJ6"/>
+                            <constraint firstItem="7Rn-Lw-Bqg" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Xbb-2E-NfB"/>
                             <constraint firstItem="NME-nV-kDa" firstAttribute="top" secondItem="bqy-ta-XYq" secondAttribute="bottom" constant="17" id="uZn-Jx-F8K"/>
                             <constraint firstItem="bqy-ta-XYq" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="z5R-dz-gpM"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="helloLabel" destination="bqy-ta-XYq" id="VwK-Va-4K5"/>
+                        <outlet property="text1" destination="JFM-Pg-tda" id="Ltd-OH-exn"/>
+                        <outlet property="text2" destination="7Rn-Lw-Bqg" id="hqw-rt-Of6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
